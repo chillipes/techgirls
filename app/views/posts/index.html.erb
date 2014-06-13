@@ -2,16 +2,7 @@
 <p>Dnes je venku krásně a sem časem přibyde text o skvělých holkách v IT, které se rozhodly založit blog.</p>
 
 
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.id %></td>
-        <td><%= post.title %></td>
-        <td><%= post.text %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+<%= render partial: "post", collection: @posts %> 
 
 
 <br>
