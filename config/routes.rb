@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'pages/kontakt'
 
-  root to: 'pages#index'
+  get 'pages/uvod'
+
+  root to: 'pages#uvod'
 
   resources :posts
 

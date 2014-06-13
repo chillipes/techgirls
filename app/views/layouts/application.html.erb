@@ -7,14 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
+
 	<ul id="menu-bar">
- 		<li class="active"><a href="./index.html">Home</a></li>
- 			<li><a href="./pages/me.html">O mně</a></li>
- 			<li><a href="./pages/kontakt.html">Kontakt</a></li>
+ 		<li><a href="/">Úvod</a></li>
+ 		<li><a href="/posts">Blog</a></li>
+ 		<li><a href="./pages/me.html">O mně</a></li>
+ 		<li><a href="./pages/kontakt.html">Kontakt</a></li>
 	</ul>
 
-<%= yield %>
+
+<div id="page">
+	<%= yield %>
+</div>
 
 </body>
 </html>

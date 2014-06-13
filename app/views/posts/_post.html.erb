@@ -2,7 +2,7 @@
         <h2><%= link_to("#{post.id}. #{post.title}", post) %></h2>
         <%= simple_format(post.text) %>
         <div>
-          Publikováno <%= post.created_at %>,
+          Publikováno <%= post.created_at.strftime "%-d. %-m. %Y" %>,
           <%= link_to 'Edit', edit_post_path(post) %>,
           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
