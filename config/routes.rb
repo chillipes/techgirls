@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/me'
+
+  get 'pages/kontakt'
+
+  root to: 'pages#index'
+
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.

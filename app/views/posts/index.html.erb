@@ -1,9 +1,12 @@
-<h1>Listing posts</h1>
+<h1>Vítejte na blogu TechGirls!</h1>
+<p>Dnes je venku krásně a sem časem přibyde text o skvělých holkách v IT, které se rozhodly založit blog.</p>
 
+<div class="VypisTab"
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Nr.</th>
+      <th>Titulek</th>
       <th>Text</th>
       <th colspan="3"></th>
     </tr>
@@ -12,6 +15,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= post.id %></td>
         <td><%= post.title %></td>
         <td><%= post.text %></td>
         <td><%= link_to 'Show', post %></td>
@@ -21,6 +25,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
